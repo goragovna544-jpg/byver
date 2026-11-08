@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05080d">
+<title>BYVER — Free Internet Access</title>
+<style>
+:root{--bg:#05080d;--panel:#0b121c;--line:#1c2b3d;--text:#e6f1ff;--muted:#8da1ba;--ac:#39f5d0;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(ellipse at 75% 0%,#10304a,transparent 50%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden;
+padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.3;background:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse at 50% 15%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 50% 15%,#000,transparent 70%)}
+a{color:var(--ac);text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.w{width:min(980px,92%);margin:auto}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:900 22px var(--mono);letter-spacing:4px;color:var(--text)}.logo b{color:var(--ac)}
+.top a:not(.logo){color:var(--muted);font:14px var(--mono)}
+.hero{padding:clamp(40px,10vw,100px) 0 50px}
+.tag{font:12px var(--mono);color:var(--ac);letter-spacing:2px}
+h1{font:900 clamp(2rem,8vw,4.6rem)/1.05 var(--mono);text-transform:uppercase;margin:14px 0;overflow-wrap:anywhere}
+h1 em{font-style:normal;color:var(--ac);text-shadow:0 0 24px rgba(57,245,208,.5)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 0 6px}
+.btn{display:inline-block;background:var(--ac);color:#03110e;font:700 15px system-ui,sans-serif;padding:12px 20px;border:0;border-radius:6px;margin:12px 10px 0 0;cursor:pointer}
+.btn:hover{text-decoration:none;filter:brightness(1.1)}.btn.alt{background:none;color:var(--text);border:1px solid var(--line)}
+section{padding:34px 0;scroll-margin-top:12px}
+h2{font:800 1.7rem var(--mono);margin:0 0 6px}h2::before{content:"> ";color:var(--ac)}
+.sub{color:var(--muted);margin:0 0 20px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:18px}
+.st,.card,.key{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.st{padding:16px}.st b{display:block;font:700 13px var(--mono);color:var(--ac);margin-bottom:4px}.st p{margin:0;color:var(--muted);font-size:.95rem}
+.keys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.key{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px}
+.key span{font:13px var(--mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.key small{color:var(--muted)}
+.cp{flex:none;background:none;color:var(--ac);border:1px solid var(--ac);border-radius:6px;padding:6px 12px;font:600 13px system-ui,sans-serif;cursor:pointer;min-width:104px}
+.cp.ok{background:var(--ac);color:#03110e}
+.warn{border-left:3px solid #f0b95a;background:var(--panel);padding:12px 14px;border-radius:4px;color:var(--muted);font-size:.93rem;margin-top:16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{padding:18px;display:flex;flex-direction:column}.card h3{font:800 1.2rem var(--mono);margin:4px 0 6px}.card p{color:var(--muted);margin:0 0 12px;font-size:.95rem}.card a{margin-top:auto;font-weight:700}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.95rem}footer p{margin:4px 0}
+noscript{display:block;color:#f0b95a;margin-top:12px}
+@media(max-width:760px){.steps,.keys,.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="top"><a class="logo" href="#">BY<b>VER</b></a><a href="#keys">Ключи</a></div>
+
+<div class="hero">
+<div class="tag">BYVER // FREE INTERNET ACCESS</div>
+<h1>Freedom is in the <em>details.</em></h1>
+<p class="lead">Свобода заключается в мелочах. Свобода — это свободный интернет.</p>
+<a class="btn" href="#keys">Получить ключ</a><a class="btn alt" href="#apps">Программы</a>
+</div>
+
+<section id="keys">
+<h2>Подключение через HAPP</h2>
+<p class="sub">Три шага, и ChatGPT, YouTube и другие сервисы открываются через защищённое соединение.</p>
+<div class="steps">
+<div class="st"><b>1. Установите</b><p><a href="https://happ-proxy.com/" target="_blank" rel="noopener noreferrer">HAPP</a> или другой клиент с поддержкой VLESS Reality (v2rayN, v2rayNG, Hiddify).</p></div>
+<div class="st"><b>2. Скопируйте ключ</b><p>Нажмите «Скопировать» у любого сервера ниже, либо «Скопировать все», чтобы добавить сразу все.</p></div>
+<div class="st"><b>3. Добавьте и подключитесь</b><p>В HAPP нажмите «+» и выберите импорт из буфера обмена (название пункта может отличаться). Выберите сервер и включите.</p></div>
+</div>
+<button class="btn" id="all" type="button" style="margin-top:0">Скопировать все ключи</button>
+<div class="keys" id="list"></div>
+<noscript>Для показа ключей нужен включённый JavaScript.</noscript>
+<div class="warn">Ключи общие: через них не стоит входить в банки и вводить важные пароли. Если сервер не открывается или работает медленно, выберите другой.</div>
+</section>
+
+<section id="apps">
+<h2>Программы и сервисы</h2>
+<p class="sub">Кнопки ведут на официальные страницы разработчиков.</p>
+<div class="grid">
+<div class="card"><div class="tag">ЧЕРЕЗ HAPP</div><h3>ChatGPT</h3><p>Подключитесь к серверу в HAPP и откройте сайт. Если не загружается, смените сервер.</p><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Открыть chatgpt.com ↗</a></div>
+<div class="card"><div class="tag">ANDROID · IOS</div><h3>Brawl Stars</h3><p>Доступность загрузки и подключения зависит от региона. Если игра не подключается, попробуйте через HAPP.</p><a href="https://supercell.com/en/games/brawlstars/" target="_blank" rel="noopener noreferrer">Страница игры ↗</a></div>
+<div class="card"><div class="tag">WINDOWS · БЕЗ КЛЮЧА</div><h3>Zapret</h3><p>Обход части DPI-ограничений, например для YouTube и Discord. Запускайте .bat от имени администратора.</p><a href="https://github.com/flowseal/zapret-discord-youtube/releases" target="_blank" rel="noopener noreferrer">Скачать на GitHub ↗</a></div>
+<div class="card"><div class="tag">ANDROID · БЕЗ КЛЮЧА</div><h3>ByeByeDPI</h3><p>Локальное VPN-подключение на телефоне для обхода DPI. Скачайте APK из Releases и нажмите «Старт».</p><a href="https://github.com/romanvht/ByeByeDPI" target="_blank" rel="noopener noreferrer">Открыть проект ↗</a></div>
+<div class="card"><div class="tag">TELEGRAM DESKTOP</div><h3>TG WS Proxy</h3><p>Прокси для Telegram Desktop. Адрес и порт из программы добавьте в настройках соединения Telegram.</p><a href="https://github.com/Flowseal/tg-ws-proxy" target="_blank" rel="noopener noreferrer">Открыть проект ↗</a></div>
+<div class="card"><div class="tag">WINDOWS · ANDROID</div><h3>HAPP</h3><p>VPN-клиент: добавляет ключи и подключает к серверам. Свои серверы не выдаёт.</p><a href="https://happ-proxy.com/" target="_blank" rel="noopener noreferrer">Официальный сайт ↗</a></div>
+</div>
+</section>
+
+<footer>
+<b>BYVER</b> — справочник программ и инструкций.
+<p>Почта: <a href="mailto:goragovna544@gmail.com">goragovna544@gmail.com</a> · Telegram: <a href="https://t.me/qubitlon" target="_blank" rel="noopener noreferrer">@qubitlon</a></p>
+<p>Законы об использовании VPN различаются по странам. Вы сами отвечаете за их соблюдение.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+var U='3f4b3f79-969c-484f-a09d-be61cf7f9d3c';
+// [адрес, SNI, publicKey, shortId, fingerprint]
+var S=[
+['45.157.235.232','xnodes21.online','7MPtoKbrJ17NUE-kNvQ00c3DiBvc2oDYJwEn94eXASo','152c52a75d3a1138'],
+['91.192.10.63','mirror.xnnodesmk2.site','DB0JeyHfL2T_rpW9Vz_YemPnogWARj6B6BWQQdIzgwk','a41c803d6a1c0ba7'],
+['193.111.117.145','xkwjeowkxnod32es.world','35SjTKZkt6D4Se5VZXpvtw2bg-vzNN94Ii1AImzt_30','8fb50e6b2e2c717f'],
+['82.25.63.150','peorewoewo3xnode.world','_f5J3dnGMfmmaWWSHOXo0X6oKAKvjnmDrdBJCcJR91w','f835c32c79483d8e'],
+['94.183.206.119','nodesxneo3o402s.space','vbUq0OLQ4mloQUJV7gtsDMh78xEap52HDWgsRdX8uCY','bb341651e677f604'],
+['154.202.74.133','werkplaats.nodesxneo3o402s.space','Q5GbOKXnaHr2F9ZZUqKLJcwDISSE68-ztlREQkmlTnU','205bda9c3073e8e4'],
+['45.84.242.242','garden.peorepow32xnode.world','ckQ57ywmT1sBKmmGM7tvayDn2Cjk-k4UaeI2sMHpbUM','466d44a2e7510850'],
+['78.40.111.245','status.xnodes21.online','wBoiHrN2_ptnZSzhPyKURsfCq6PjAHcdIkZCwQRvg3o','3e262aa85ac5802d'],
+['94.183.167.115','sklep.xkwjeowkxnod32es.world','kg9no_nm7jed3rGlnCUpn-HqLJ761Xk_CfJfx8sFsTY','2c20502ebff72181'],
+['88.216.62.134','blog.xnnodesmk2.site','ytasYbpkUK9l4bJ2dP94dBxVu4KH-zP_jMEEv2uaT0s','f280594092f4348e'],
+['88.216.60.127','studio.xnnodesmk2.site','cV1tu1iP01cRv6jOJwVBYWZQIK7im_hg1MJHadxAegE','8311f8b57a335e86'],
+['88.216.73.107','cdn-15.cdnvideo.tech','SKeb3zbMyaTH_RsNPvXWG8T8sd2hvcSXp9cJrUt8OXU','4ca740946b0a86ba'],
+['88.216.188.85','cdn-17.cdnvideo.tech','8sbb02arinJEPpO4Hy5S3c49ZDbtqJO8KAzyMTFwgls','72b0239b02e1b115'],
+['159.200.230.208','xnnodesmk2.site','W1uVw2nsgdXS0fmrhLGEq0DPgsEn47FqE0l_4YFySzQ','5183c37ce9351875'],
+['aurora-coffee.site','aurora-coffee.site','L6QwlckWUocQ1d-QtUKoBbHCMOSzx1DYvdOW660hiyU','2d231bc093274832','chrome']
+];
+function link(s,i){return 'vless://'+U+'@'+s[0]+':443?encryption=none&flow=xtls-rprx-vision&security=reality&sni='+s[1]+'&fp='+(s[4]||'firefox')+'&pbk='+s[2]+'&sid='+s[3]+'&type=tcp#'+encodeURIComponent('BYVER '+(i+1))}
+function copy(t,btn,label){
+function ok(){var o=btn.textContent;btn.textContent='Скопировано';btn.classList.add('ok');setTimeout(function(){btn.textContent=label;btn.classList.remove('ok')},1600)}
+function fb(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);try{document.execCommand('copy');ok()}catch(e){prompt('Скопируйте ключ вручную:',t)}document.body.removeChild(a)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fb)}else fb()}
+var L=document.getElementById('list');
+S.forEach(function(s,i){
+var d=document.createElement('div');d.className='key';
+var sp=document.createElement('span');sp.textContent='Сервер '+(i+1)+' ';var sm=document.createElement('small');sm.textContent=s[0].length>16?s[0]:s[0].replace(/\.\d+$/,'.•');sp.appendChild(sm);
+var b=document.createElement('button');b.type='button';b.className='cp';b.textContent='Скопировать';
+b.onclick=function(){copy(link(s,i),b,'Скопировать')};
+d.appendChild(sp);d.appendChild(b);L.appendChild(d)});
+var A=document.getElementById('all');
+A.onclick=function(){copy(S.map(link).join('\n'),A,'Скопировать все ключи')};
+})();
+</script>
+</body>
+</html>
